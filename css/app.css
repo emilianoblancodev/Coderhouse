@@ -1,0 +1,113 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #6A9113;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #141517, #6A9113);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #141517, #6A9113); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 6rem;
+    padding: 3rem 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: cadetblue;
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+h3{
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+h6{
+    color: black;
+    font-size: small;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.contenedor {
+    background-color: whitesmoke;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+img{
+    
+    border-radius: 10px;
+}
+
+form {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem;
+    background: white;
+    margin-bottom: 10rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#logo{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+#app p{
+    text-align: left!important;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#resultado p {
+    margin: 0;
+    padding: 2rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+#resultado p span {
+    font-weight: bold;
+}
+#resultado p:last-of-type{
+    border: none;
+}
+.alerta {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    font-size: 2rem;
+}
+.error {
+    background-color:rgb(255, 127, 127);
+}
+
+.label{
+    font-size: medium;
+    font-weight: 800;
+}
+
+#boton{
+    margin: 1rem;
+
+}
