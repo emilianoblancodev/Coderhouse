@@ -1,3 +1,9 @@
+const expresiones = {
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefono: /^\d{7,14}$/ // 7 a 14 numeros
+}
+
 //declaro las variables que se necesitan
 const nombre = document.getElementById('nombre');
 const telefono = document.getElementById('telefono');
@@ -12,15 +18,22 @@ telefono.addEventListener('blur', validarFormulario);
 email.addEventListener('blur', validarFormulario);
 textarea.addEventListener('blur', validarFormulario);
 
-
-
 // Funciones
+
 function validarFormulario(e){
-    if(e.target.value.length = 0){
-        e.target.classList.add('error');
-        
+    e.preventDefault();
+
+    if(nombre.value ==='' || nombre.value.length>30){
+        mostrarError();
     }
-    mostrarError();
+
+    if (telefono.value === '' || telefono.value == isNaN || telefono.value.length>10){
+        mostrarError();
+    }
+
+    if(expresiones.email== false){
+        mostrarError();
+    }
 }
 
 function mostrarError (){
