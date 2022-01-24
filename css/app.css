@@ -4,9 +4,10 @@ html {
 }
 
 body {
-    background: #6A9113;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #141517, #6A9113);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #141517, #6A9113); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background: #FFEEEE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
     font-family: 'Ubuntu', sans-serif;
 }
@@ -16,7 +17,7 @@ h1 {
     font-size: 6rem;
     padding: 3rem 0;
     margin: 0;
-    color: white;
+    color:black;
     text-align: center;
 }
 
@@ -113,6 +114,3 @@ form {
 
 }
 
-#modo{
-    width: 30px;
-}
