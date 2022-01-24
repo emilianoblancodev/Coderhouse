@@ -16,6 +16,8 @@ btnSwitch.addEventListener('click', () => {
 
 if(localStorage.getItem('modo-oscuro') === 'true'){
     document.body.classList.add('dark');
+    btnSwitch.classList.add('active');
 } else {
     document.body.classList.remove('dark');
+    btnSwitch.classList.remove('active');
 }
