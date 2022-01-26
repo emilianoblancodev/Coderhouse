@@ -106,8 +106,10 @@ function mostrarAutos(autos){
             <img class="img-fluid" src="${auto.imagen}"/ width=800 height=450px>
             <div class="row">
                 <div class="col">
+                    <div><a>Más Info</a></div>
                     <a href="contacto.html"><button type="button" id="boton" class="btn btn-outline-danger">Me interesa</button></a>
                 </div>
+                
             </div>
             
         `;
