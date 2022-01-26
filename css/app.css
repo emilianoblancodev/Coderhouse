@@ -63,7 +63,7 @@ form {
     margin: 0 auto;
     padding: 4rem;
     background: white;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 #logo{
@@ -183,5 +183,15 @@ body.dark{
 
 .dark p{
     color:white;
+}
+
+#sociales{
+    margin: 0 auto;
+}
+
+.icon{
+    margin-right: 5px;
+    margin-left: 150px;
+    margin-bottom: 2rem;
 }
 
