@@ -7,6 +7,7 @@ const puertas = document.querySelector('#puertas');
 const transmision = document.querySelector('#transmision');
 const color = document.querySelector('#color');
 const boton = document.querySelector('#boton');
+const kilometros = document.querySelector('#kilometros');
 
 // Para generar el rango de años de los coches que va a comercializar la empresa
 const years = document.createElement('option');
@@ -29,7 +30,8 @@ const datosBusqueda = {
     transmision: '',
     minimo: '',
     maximo:'',
-    puertas:''
+    puertas:'',
+    kilometros:'',
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -82,6 +84,12 @@ color.addEventListener('input', e => {
     filtrarAuto();
 });
 
+kilometros.addEventListener('input', e => {
+    datosBusqueda.kilometros = Number(e.target.value);
+    // llamar a la función de filtrar Autos
+    filtrarAuto();
+});
+
 function limpiarHTML() {
     // Leer el elemento Resultado
     const contenedor = document.querySelector('#resultado');
@@ -107,8 +115,8 @@ function mostrarAutos(autos){
             <div class="row info_padre">
                 <div class="col">
                     <div ><a href="#" class="infolink">Más Info</a></div>
-                    <div class="resultado_info">Kilometraje: ${auto.Kilometros}</div>
-                    <a href="contacto.html"><button type="button" id="boton" class="btn btn-outline-danger">Me interesa</button></a>
+                    <div class="resultado_info">Kilometraje: ${auto.kilometros}</div>
+                    <a href="contacto.html"><button type="button" id="boton" class="btn btn-danger">Me interesa</button></a>
                 </div>
             </div>
             
@@ -126,7 +134,7 @@ function noResultado() {
 }
 
 function filtrarAuto() {
-   const resultado = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarPuertas).filter(filtrarTransmision).filter(filtrarColor);
+   const resultado = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarPuertas).filter(filtrarTransmision).filter(filtrarColor).filter(filtrarKilometros);
 
 //    console.log(resultado);
    if(resultado.length){
@@ -180,6 +188,13 @@ function filtrarTransmision(auto) {
 function filtrarColor(auto){
     if(datosBusqueda.color){
         return auto.color === datosBusqueda.color;
+    } 
+    return  auto;
+}
+
+function filtrarKilometros(auto){
+    if(datosBusqueda.kilometros){
+        return auto.kilometros === datosBusqueda.kilometros;
     } 
     return  auto;
 }

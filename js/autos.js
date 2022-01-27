@@ -7,7 +7,7 @@ const autos = [
 		puertas: 5,
 		color: 'Azul eléctrico',
 		transmision: 'automatico',
-		Kilometros: '19046 Km',
+		kilometros: 19046,
 		imagen: 'img/BMW_m3.png'
 	},
 	{ 
@@ -18,7 +18,7 @@ const autos = [
         puertas: 5, 
         color: 'Gris plomo', 
         transmision: 'automatico', 
-		Kilometros: '20386 Km',
+		kilometros: 20386,
 		imagen: 'img/AUDI_a4.png'
     },
 	{
@@ -29,7 +29,7 @@ const autos = [
 		puertas: 3,
 		color: 'Blanco',
 		transmision: 'automatico',
-		Kilometros: '64025 Km',
+		kilometros: 64025,
 		imagen: 'img/MUSTANG_shelby.png'
 	},
 	{
@@ -40,7 +40,7 @@ const autos = [
 		puertas: 5,
 		color: 'Blanco',
 		transmision: 'manual',
-		Kilometros: '70234 Km',
+		kilometros: 70234,
 		imagen: 'img/Fluence_blanco.png'
 	},
 	{ 
@@ -51,7 +51,7 @@ const autos = [
         puertas: 5, 
         color: 'Negro', 
         transmision: 'automatico',
-		Kilometros: '85328 Km',
+		kilometros: 85328,
 		imagen:'img/Audi_a6_negro.png' 
     },
 	{
@@ -62,7 +62,7 @@ const autos = [
 		puertas: 3,
 		color: 'Blanco',
 		transmision: 'manual',
-		Kilometros: '59302 Km',
+		kilometros: 59302,
 		imagen: 'img/DS3_blanco.png'
 	},
 	{
@@ -73,7 +73,7 @@ const autos = [
 		puertas: 5,
 		color: 'Azul',
 		transmision: 'automatico',
-		Kilometros: '103292 Km',
+		kilometros: 103292,
 		imagen:'img/BMW_530_azul.png'
 	},
 	{
@@ -84,7 +84,7 @@ const autos = [
 		puertas: 5,
 		color: 'Azul',
 		transmision: 'automatico',
-		Kilometros: '73420 Km',
+		kilometros: 73420,
 		imagen:'img/MB_claseC.png'
 	},
 	{
@@ -95,7 +95,7 @@ const autos = [
 		puertas: 5,
 		color: 'Rojo',
 		transmision: 'manual',
-		Kilometros: '66874 Km',
+		kilometros: 66874,
 		imagen:'img/3008_rojo.png'
 	},
 	{ 
@@ -106,7 +106,7 @@ const autos = [
         puertas: 3, 
         color: 'Negro', 
         transmision: 'manual',
-		Kilometros: '53208 Km',
+		kilometros: 53208,
 		imagen:'img/Mustang_negro.png' 
     },
 	{
@@ -117,7 +117,7 @@ const autos = [
 		puertas: 5,
 		color: 'Blanco',
 		transmision: 'automatico',
-		Kilometros: '45897 Km',
+		kilometros: 45897,
 		imagen:'img/208_gti.png'
 	},
 	{ 
@@ -128,7 +128,7 @@ const autos = [
         puertas: 5, 
         color: 'Negro', 
         transmision: 'manual',
-		Kilometros: '21078 Km',
+		kilometros: 21078,
 		imagen:'img/AudiA3_negro.png' 
     },
 	{
@@ -139,7 +139,7 @@ const autos = [
 		puertas: 5,
 		color: 'Blanco',
 		transmision: 'manual',
-		Kilometros: '22944 Km',
+		kilometros: 22944,
 		imagen:'img/2008_blanco.png'
 	},
 	{
@@ -150,7 +150,7 @@ const autos = [
 		puertas: 3,
 		color: 'Gris',
 		transmision: 'automatico',
-		Kilometros: '17833 Km',
+		kilometros: 20000,
 		imagen:'img/MB_claseC_gris.png'
 	},
 	{
@@ -161,7 +161,7 @@ const autos = [
 		puertas: 5,
 		color: 'Negro',
 		transmision: 'automatico',
-		Kilometros: '23874 Km',
+		kilometros: 23874,
 		imagen:'img/BMW_523.png'
 	},
 	{ 
@@ -172,7 +172,7 @@ const autos = [
         puertas: 3, 
         color: 'Negro', 
         transmision: 'manual',
-		Kilometros: '55982 Km',
+		kilometros: 55982,
 		imagen:'img/Focus3P.png' 
     },
 	{
@@ -183,7 +183,7 @@ const autos = [
 		puertas: 5,
 		color: 'Azul',
 		transmision: 'automatico',
-		Kilometros: '33907 Km',
+		kilometros: 33907,
 		imagen:'img/Mondeo_azul.png'
 	},
 	{
@@ -194,7 +194,7 @@ const autos = [
 		puertas: 5,
 		color: 'Blanco',
 		transmision: 'automatico',
-		Kilometros: '9844 Km',
+		kilometros: 9844,
 		imagen:'img/328_blanco.png'
 	},
 	{
@@ -205,7 +205,7 @@ const autos = [
 		puertas: 3,
 		color: 'Gris',
 		transmision: 'automatico',
-		Kilometros: '15822 Km',
+		kilometros: 15822,
 		imagen:'img/323_M3.png'
 	},
 	{
@@ -216,7 +216,7 @@ const autos = [
 		puertas: 5,
 		color: 'Blanco',
 		transmision: 'automatico',
-		Kilometros: '6744 Km',
+		kilometros: 6744,
 		imagen:'img/MB_claseE.png'
 	},
 	{ 
@@ -227,7 +227,7 @@ const autos = [
         puertas: 5, 
         color: 'Blanco', 
         transmision: 'automatico',
-		Kilometros: '5222 Km',
+		kilometros: 5222,
 		imagen:'img/Audi_A1.png' 
     }
 ];
