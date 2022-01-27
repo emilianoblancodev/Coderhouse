@@ -8,7 +8,6 @@ body {
     background: #FFEEEE;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -70,8 +69,9 @@ form {
     width: 200px;
     height: 200px;
     display: block;
+    margin-left: 2rem;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 1rem;
 }
 
 
@@ -121,10 +121,11 @@ form {
     border: none;
     position: relative;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     outline: none;
-    margin: 0 auto;
-    margin-top: 2rem;
+    /* margin: 0 auto; */
+    margin-top: 1rem;
+    margin-left: 120rem;
 }
 
 .switch::after{
