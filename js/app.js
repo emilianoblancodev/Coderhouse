@@ -110,12 +110,12 @@ function mostrarAutos(autos){
     autos.forEach(auto => {
         const autoHTML = document.createElement('p');
         autoHTML.innerHTML = `
-            <p>${auto.marca} ${auto.modelo} - ${auto.year} - ${auto.puertas} Puertas - Transmisión: ${auto.transmision} - Precio: ${auto.precio} - Color: ${auto.color}</p>
+            <p>${auto.marca} ${auto.modelo} - ${auto.year} - ${auto.puertas} Puertas - Transmisión: ${auto.transmision} - Km: ${auto.kilometros} - Color: ${auto.color}</p>
             <img class="img-fluid" src="${auto.imagen}"/ width=800 height=450px>
-            <div class="row info_padre">
-                <div class="col">
-                    <div ><a href="#" class="infolink">Más Info</a></div>
-                    <div class="resultado_info">Kilometraje: ${auto.kilometros}</div>
+            <div class="row">
+                <div class="col info_padre">
+                    <div><a href="#" class="infolink">Más Info</a></div>
+                    <div class="resultado_info">Precio: ${auto.precio}</div>
                     <a href="contacto.html"><button type="button" id="boton" class="btn btn-danger">Me interesa</button></a>
                 </div>
             </div>
@@ -194,7 +194,7 @@ function filtrarColor(auto){
 
 function filtrarKilometros(auto){
     if(datosBusqueda.kilometros){
-        return auto.kilometros === datosBusqueda.kilometros;
+        return auto.kilometros <= datosBusqueda.kilometros;
     } 
     return  auto;
 }
