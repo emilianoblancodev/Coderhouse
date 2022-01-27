@@ -195,11 +195,22 @@ body.dark{
     margin-bottom: 2rem;
 }
 
-.masinfo{
-    margin-top: 1rem;
+/* Estilos para mostrar y ocultar el kilometraje de los autos */
+/* .masinfo{
+    margin-top: 2rem;
     margin-bottom: 1rem;
-}
-.masinfo a{
+} */
+
+.infolink{
     color: cadetblue;
+    font-size: larger;
     text-decoration: none;
+    margin-top: 2rem;
+}
+
+.resultado_info{
+    display: none;
+    font-size:xx-large;
+    color:slateblue;
+    margin-top: 2rem;
 }

@@ -104,12 +104,12 @@ function mostrarAutos(autos){
         autoHTML.innerHTML = `
             <p>${auto.marca} ${auto.modelo} - ${auto.year} - ${auto.puertas} Puertas - Transmisión: ${auto.transmision} - Precio: ${auto.precio} - Color: ${auto.color}</p>
             <img class="img-fluid" src="${auto.imagen}"/ width=800 height=450px>
-            <div class="row">
+            <div class="row info_padre">
                 <div class="col">
-                    <div class="masinfo"><a href="#">Más Info</a></div>
+                    <div ><a href="#" class="infolink">Más Info</a></div>
+                    <div class="resultado_info">Kilometraje: ${auto.Kilometros}</div>
                     <a href="contacto.html"><button type="button" id="boton" class="btn btn-outline-danger">Me interesa</button></a>
                 </div>
-                
             </div>
             
         `;
@@ -189,3 +189,4 @@ boton.addEventListener('click', e => {
     console.log("se hizo click");
     
 });
+
