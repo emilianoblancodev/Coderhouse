@@ -34,34 +34,35 @@ const datosBusqueda = {
     kilometros:'',
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarAutos(autos);
-});
+     mostrarAutos(autos);
+ });
 
 // Event Listeners para el formulario
 marca.addEventListener('input', e => {
     datosBusqueda.marca = e.target.value;
 
-    // Mandar llamar la función de filtrar Autos
+    // llama la función de filtrar Autos
     filtrarAuto();
 });
 
 year.addEventListener('input', e => {
     datosBusqueda.year = Number(e.target.value);
-    // Mandar llamar la función de filtrar Autos
+    // llama la función de filtrar Autos
     filtrarAuto();
 });
 
 minimo.addEventListener('input', e => {
     datosBusqueda.minimo = Number(e.target.value);
-    // Mandar llamar la función de filtrar Autos
+    //  llamar la función de filtrar Autos
     filtrarAuto();
 });
 
 
 maximo.addEventListener('input', e => {
     datosBusqueda.maximo = Number(e.target.value);
-    // Mandar llamar la función de filtrar Autos
+    //  llamar la función de filtrar Autos
     filtrarAuto();
 });
 
@@ -114,7 +115,7 @@ function mostrarAutos(autos){
             <img class="img-fluid" src="${auto.imagen}"/ width=800 height=450px>
             <div class="row">
                 <div class="col info_padre">
-                    <div><a href="#" class="infolink">Más Info</a></div>
+                    <p><a href="#" class="infolink"> Más Info </a></p>
                     <div class="resultado_info">Precio: ${auto.precio}</div>
                     <a href="contacto.html"><button type="button" id="boton" class="btn btn-danger">Me interesa</button></a>
                 </div>
@@ -124,6 +125,7 @@ function mostrarAutos(autos){
         contenedor.appendChild(autoHTML);
     })
 }
+
 function noResultado() {
     limpiarHTML();
 
@@ -136,7 +138,7 @@ function noResultado() {
 function filtrarAuto() {
    const resultado = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarPuertas).filter(filtrarTransmision).filter(filtrarColor).filter(filtrarKilometros);
 
-//    console.log(resultado);
+// Si el resultado tiene algo lo muestra y sino muestra mensaje no resultado;
    if(resultado.length){
         mostrarAutos(resultado);
    } else {
