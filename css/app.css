@@ -193,15 +193,10 @@ body.dark{
 
 .icon{
     margin-right: 5px;
-    margin-left: 150px;
+    margin-left: 170px;
     margin-bottom: 2rem;
 }
 
-/* Estilos para mostrar y ocultar el kilometraje de los autos */
-/* .masinfo{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-} */
 
 .infolink{
     color: cadetblue;
