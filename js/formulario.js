@@ -23,15 +23,15 @@ textarea.addEventListener('blur', validarFormulario);
 function validarFormulario(e){
     e.preventDefault();
 
-    if(nombre.value ==='' || nombre.value.length>30){
+    if(nombre.value ==='' || nombre.value.length>25){
         mostrarError();
     }
 
-    if (telefono.value === '' || telefono.value == isNaN || telefono.value.length>10){
+    if (telefono.value ==='' || telefono.value == isNaN || telefono.value.length>10){
         mostrarError();
     }
 
-    if(expresiones.email== false){
+    if(expresiones.correo == false){
         mostrarError();
     }
 }
