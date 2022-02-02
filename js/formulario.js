@@ -13,10 +13,11 @@ const form = document.getElementById('formulario');
 const btnEnviar = document.getElementById('enviar');
 
 //Eventos
-nombre.addEventListener('blur', validarFormulario);
-telefono.addEventListener('blur', validarFormulario);
-email.addEventListener('blur', validarFormulario);
-textarea.addEventListener('blur', validarFormulario);
+nombre.addEventListener('change', validarFormulario);
+telefono.addEventListener('change', validarFormulario);
+email.addEventListener('change', validarFormulario);
+textarea.addEventListener('change', validarFormulario);
+btnEnviar.addEventListener('submit', mostrarEnviado);
 
 // Funciones
 
@@ -34,6 +35,7 @@ function validarFormulario(e){
     if(expresiones.correo == false){
         mostrarError();
     }
+
 }
 
 function mostrarError (){
@@ -43,6 +45,18 @@ function mostrarError (){
     //compruebo si existe la clase error
     const claseError = document.querySelectorAll('.error')
     if(claseError.length === 0){
+        form.appendChild(p);
+    }
+}
+
+function mostrarEnviado (){
+    const p = document.createElement('p');
+    p.textContent = "Formulario enviado correctamente";
+    p.classList.add ('border','border-success','border-2', 'p-2','mt-5', 'enviado')
+
+    //compruebo si existe la clase enviado
+    const claseEnviado = document.querySelectorAll('.enviado')
+    if(claseEnviado.length === 0){
         form.appendChild(p);
     }
 }

@@ -104,6 +104,10 @@ form {
     background-color:rgb(255, 127, 127);
 }
 
+.enviado{
+    background-color: green;
+}
+
 .label{
     font-size: medium;
     font-weight: 800;
