@@ -238,3 +238,10 @@ body.dark{
 @keyframes blink {
     50% {border-color: transparent}
 }
+
+#ip{
+    text-align: left;
+    margin-left: 20rem;
+    margin-top: 3rem;
+    font-size: xx-large;
+}
