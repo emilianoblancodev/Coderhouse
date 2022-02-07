@@ -240,8 +240,8 @@ body.dark{
 }
 
 #ip{
-    text-align: left;
-    margin-left: 20rem;
+    text-align: center;
+    /* margin-left: 10rem; */
     margin-top: 3rem;
-    font-size:x-large
+    font-size:medium;
 }
