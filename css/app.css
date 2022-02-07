@@ -129,9 +129,10 @@ form {
     cursor: pointer;
     display: inline-flex;
     outline: none;
-    /* margin: 0 auto; */
-    margin-top: 1rem;
-    margin-left: 120rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-left: 83rem;
+    margin-bottom: 2rem;
 }
 
 .switch::after{
