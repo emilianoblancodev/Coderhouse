@@ -20,7 +20,7 @@ function checkInputs() {
 	
 	
 	if(nombreValue === '') {
-		setErrorFor(nombre, 'No puede dejar el usuario en blanco');
+		setErrorFor(nombre, 'No puede dejar el nombre en blanco');
 	} else {
 		setSuccessFor(nombre);
 	}
