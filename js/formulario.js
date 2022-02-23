@@ -1,71 +1,75 @@
-// const expresiones = {
-// 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios
-// 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-// 	telefono: /^\d{7,14}$/ // 7 a 14 numeros
-// }
-
-//declaro las variables que se necesitan
+const form = document.getElementById('form');
 const nombre = document.getElementById('nombre');
-const telefono = document.getElementById('telefono');
+const apellido = document.getElementById('apellido');
 const email = document.getElementById('email');
 const textarea = document.getElementById('textarea');
-const form = document.getElementById('formulario');
-const btnEnviar = document.getElementById('enviar');
 
-//Eventos
-nombre.addEventListener('change', validarFormulario);
-telefono.addEventListener('change', validarFormulario);
-email.addEventListener('change', validarFormulario);
-textarea.addEventListener('change', validarFormulario);
-form.addEventListener('submit', mostrarEnviado);
 
-// Funciones
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	
+	checkInputs();
+});
 
-function validarFormulario(e){
-    e.preventDefault();
+function checkInputs() {
+	// trim para remover espacios en blanco
+	const nombreValue = nombre.value.trim();
+	const emailValue = email.value.trim();
+    const apellidoValue = apellido.value.trim();
+    const textareaValue = textarea.value;
+	
+	
+	if(nombreValue === '') {
+		setErrorFor(nombre, 'No puede dejar el usuario en blanco');
+	} else {
+		setSuccessFor(nombre);
+	}
+	
+    if(apellidoValue === '') {
+		setErrorFor(apellido, 'No puede dejar el apellido en blanco');
+	} else {
+		setSuccessFor(apellido);
+	}
 
-    if(nombre.value ==='' || nombre.value.length>25){
-        mostrarError();
-    }
-
-    if (telefono.value ==='' || telefono.value == isNaN || telefono.value.length>10){
-        mostrarError();
-    }
-
-    if(expresiones.correo == false){
-        mostrarError();
-    }
+	if(emailValue === '') {
+		setErrorFor(email, 'No puede dejar el email en blanco');
+	} else if (!isEmail(emailValue)) {
+		setErrorFor(email, 'No ingreso un email válido');
+	} else {
+		setSuccessFor(email);
+	}
+	
+    if(textareaValue === '') {
+		setErrorFor(textarea, 'La consulta debe contener texto');
+	} else {
+		setSuccessFor(textarea);
+	}
 
 }
 
-function mostrarError (){
-    const p = document.createElement('p');
-    p.textContent = "Todos los campos son obligatorios";
-    p.classList.add ('border','border-danger','border-2', 'p-2','mt-5', 'error');
-        setTimeout(() => {
-            p.remove();
-        }, 3000);
-    //compruebo si existe la clase error
-    const claseError = document.querySelector('.error')
-    if(claseError.length === 0){
-        form.appendChild(p);
-    }
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
 }
 
-function mostrarEnviado (){
-    const pok = document.createElement('p');
-    pok.textContent = "Formulario enviado correctamente";
-    pok.classList.add ('border','border-success','border-2', 'p-2','mt-5', 'enviado');
-        setTimeout(() => {
-            pok.remove();
-        }, 3000);
-
-    //compruebo si existe la clase enviado
-    const claseEnviado = document.querySelectorAll('.enviado')
-    if(claseEnviado.length === 0){
-        form.appendChild(p);
-    }
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
 }
+
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+
+
+
+
+
+
+
 
 
 
